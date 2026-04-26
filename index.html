@@ -3,58 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İyi ki Doğdun Sevgilim!</title>
+    <title>İyi ki Doğdun!</title>
     <style>
         body { 
-            background: #0b0b0b; 
-            color: #ffffff; 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: #ff4757; /* Arka planı kırmızı yaptık ki siyah kalmasın! */
+            color: white; 
+            font-family: 'Arial', sans-serif; 
             display: flex; 
             align-items: center; 
             justify-content: center; 
-            min-height: 100vh; 
+            height: 100vh; 
             margin: 0; 
             text-align: center;
         }
-        .container {
-            max-width: 400px;
-            padding: 30px;
-            border: 1px solid #333;
-            border-radius: 20px;
-            background: #161616;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
-        }
-        /* Fotoğraf Alanı */
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 4px solid #ff4757;
-            object-fit: cover;
-            margin-bottom: 20px;
-            box-shadow: 0 0 20px rgba(255, 71, 87, 0.3);
-        }
-        h1 { color: #ff4757; font-size: 2rem; margin-bottom: 10px; }
-        p { color: #ccc; line-height: 1.6; }
-        
-        .btn {
-            background: #ff4757;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            font-size: 1.1rem;
-            border-radius: 50px;
-            cursor: pointer;
-            margin-top: 15px;
-            transition: 0.3s;
-        }
-        .btn:hover { background: #ff6b81; transform: scale(1.05); }
-
-        #surprise { display: none; margin-top: 25px; border-top: 1px solid #333; padding-top: 20px; animation: fadeIn 1s; }
-        .heart { font-size: 40px; color: #ff4757; animation: beat 0.8s infinite alternate; }
-        
-        @keyframes beat { to { transform: scale(1.2); } }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .card { background: white; color: #333; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); width: 80%; max-width: 400px; }
+        img { width: 100%; border-radius: 10px; margin-bottom: 15px; background: #eee; }
+        h1 { color: #ff4757; margin: 10px 0; font-size: 1.5rem; }
+        .btn { background: #ff4757; color: white; border: none; padding: 10px 20px; border-radius: 50px; cursor: pointer; font-weight: bold; }
+        #msg { display: none; margin-top: 20px; font-weight: bold; color: #ff4757; }
     </style>
 </head>
 <body>
+    <div class="card">
+        <img src="resim.jpg" alt="❤️❤️❤️">
+        <h1>İyi ki Doğdun Sevgilim!</h1>
+        <p>Seninle her şey çok daha güzel.</p>
+        <button class="btn" onclick="document.getElementById('msg').style.display='block'; this.style.display='none';">Tıkla Bakalım ❤️❤️❤️</button>
+        <div id="msg">SENİ ÇOK SEVİYORUM!</div>
